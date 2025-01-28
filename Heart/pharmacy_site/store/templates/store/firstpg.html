@@ -183,9 +183,39 @@
         .section:hover::before {
             opacity: 1;
         }
+
+        /* Back button styles */
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            text-decoration: none;
+            color: #4a4a4a;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 10px 15px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 25px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .back-btn:hover {
+            transform: translateX(-5px);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .back-btn::before {
+            content: '←';
+            font-size: 1.4rem;
+        }
     </style>
 </head>
 <body>
+    <a href="javascript:history.back()" class="back-btn">Back</a>
     <div class="split-container">
         <!-- Patient Section -->
         <div class="section patient-section">

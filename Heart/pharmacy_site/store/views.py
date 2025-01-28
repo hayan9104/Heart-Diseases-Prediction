@@ -262,3 +262,6 @@ def last_consultation(request):
 
 def fectors(request):
     return render(request, 'store/fectors.html')
+
+def coverpg(request):
+    return render(request, 'store/coverpg.html')
